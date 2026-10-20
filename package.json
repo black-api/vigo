@@ -39,6 +39,7 @@
     "dev": "npm run build && node dist/cli.js",
     "test": "npm run build && node --test test/*.test.mjs",
     "demos": "node scripts/build-demos.mjs",
+    "pages": "git push origin main:gh-pages",
     "mcp": "node dist/cli.js mcp"
   },
   "keywords": [

@@ -10,6 +10,8 @@ Do not break either without updating `src/guide.ts`, `README.md`, and tests.
 npm install
 npm run build      # tsc -> dist/, then chmod the CLI
 npm test           # build + node:test (renders real video; needs ffmpeg + Chromium)
+npm run demos      # regenerate the narrated demo videos (needs edge-tts)
+npm run pages      # publish index.html + assets/ to the gh-pages branch
 node dist/cli.js doctor
 node dist/cli.js render examples/hello/vigo.json -o /tmp/hello.mp4 \
   --width 640 --height 360 --fps 15
@@ -25,6 +27,8 @@ node dist/cli.js render examples/hello/vigo.json -o /tmp/hello.mp4 \
 - `src/cli.ts` — hand-rolled argument parser; keep `--json` clean on stdout.
 - `src/mcp/server.ts` — MCP tools; schemas must stay agent-friendly.
 - `test/*.test.mjs` — runs against `dist/`; build first.
+- `index.html` + `assets/` — GitHub Pages landing site (served from the `gh-pages` branch).
+- `assets/icon*.svg`, `favicon.ico` — brand marks; keep the palette in sync with the site.
 
 ## Invariants
 

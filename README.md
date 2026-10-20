@@ -428,7 +428,13 @@ The icon is a dark squircle, a play glyph, and a timeline bar with a playhead.
 | `assets/apple-touch-icon.png` | iOS home screen (180×180) |
 | `assets/og-image.png` | social preview card (1200×630) |
 
-The landing page lives at [`index.html`](index.html) and is served by GitHub Pages from the repository root.
+The landing page lives at [`index.html`](index.html) and is published to GitHub Pages from the `gh-pages` branch. After changing the site, re-publish it:
+
+```bash
+npm run pages     # git push origin main:gh-pages
+```
+
+The published site is https://black-api.github.io/vigo/.
 
 ## Contributing
 
@@ -436,6 +442,7 @@ The landing page lives at [`index.html`](index.html) and is served by GitHub Pag
 npm install
 npm test            # builds, then runs node:test against dist/
 npm run demos       # regenerate the narrated demo videos
+npm run pages       # re-publish the landing page to the gh-pages branch
 ```
 
 The public contract is the JSON timeline and the deterministic seek behavior. If you change either, update `src/guide.ts`, this README, and the tests in the same change.
