@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "name": "vigo-ad",
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "duration": 33.208,
+  "background": "#05070d",
+  "tracks": [
+    {
+      "id": "main",
+      "type": "html",
+      "clips": [
+        {
+          "id": "hook",
+          "kind": "html",
+          "src": "scenes/hook.html",
+          "start": 0,
+          "duration": 6.37
+        },
+        {
+          "id": "reveal",
+          "kind": "html",
+          "src": "scenes/reveal.html",
+          "start": 6.37,
+          "duration": 4.978
+        },
+        {
+          "id": "pipeline",
+          "kind": "html",
+          "src": "scenes/pipeline.html",
+          "start": 11.348,
+          "duration": 5.698
+        },
+        {
+          "id": "edit",
+          "kind": "html",
+          "src": "scenes/edit.html",
+          "start": 17.046,
+          "duration": 5.4
+        },
+        {
+          "id": "mcp",
+          "kind": "html",
+          "src": "scenes/mcp.html",
+          "start": 22.446,
+          "duration": 5.4
+        },
+        {
+          "id": "outro",
+          "kind": "html",
+          "src": "scenes/outro.html",
+          "start": 27.846,
+          "duration": 5.362
+        }
+      ]
+    },
+    {
+      "id": "voice",
+      "type": "audio",
+      "clips": [
+        {
+          "id": "hook-vo",
+          "kind": "audio",
+          "src": "audio/hook.mp3",
+          "start": 0.3,
+          "duration": 5.52,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "reveal-vo",
+          "kind": "audio",
+          "src": "audio/reveal.mp3",
+          "start": 6.67,
+          "duration": 4.128,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "pipeline-vo",
+          "kind": "audio",
+          "src": "audio/pipeline.mp3",
+          "start": 11.648,
+          "duration": 4.848,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "edit-vo",
+          "kind": "audio",
+          "src": "audio/edit.mp3",
+          "start": 17.346,
+          "duration": 2.52,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "mcp-vo",
+          "kind": "audio",
+          "src": "audio/mcp.mp3",
+          "start": 22.746,
+          "duration": 3.048,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "outro-vo",
+          "kind": "audio",
+          "src": "audio/outro.mp3",
+          "start": 28.146,
+          "duration": 4.512,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        }
+      ]
+    },
+    {
+      "id": "music",
+      "type": "audio",
+      "clips": [
+        {
+          "id": "music-bed",
+          "kind": "audio",
+          "src": "audio/music.mp3",
+          "start": 0,
+          "duration": 33.208,
+          "volume": 0.16,
+          "fadeIn": 2,
+          "fadeOut": 3
+        }
+      ]
+    }
+  ]
+}

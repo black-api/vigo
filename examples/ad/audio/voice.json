@@ -1,0 +1,38 @@
+{
+  "hook": {
+    "hash": "a47c94b88ae672bf6899ebc21f2f474062025e50a081923db154f2f3908f345a",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+3%",
+    "text": "Video is the last thing an AI agent cannot make. Vigo changes that."
+  },
+  "reveal": {
+    "hash": "861e84e34ac6c4ae3d2bf8081bf2f00f7cd2c9b0b7910ef85e7f26f151305e95",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+3%",
+    "text": "Write HTML. Describe your timeline in JSON."
+  },
+  "pipeline": {
+    "hash": "59a41820a87502a22dfbc680ec59ab117b5aaf3893bf4f95fbb44bcf8be262c7",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+3%",
+    "text": "Vigo seeks every frame, paints it, and renders a real video."
+  },
+  "edit": {
+    "hash": "1915d40dafeac6061a1a11346285199d84bea6f67e839fd6ec0a1f4574e0ebff",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+3%",
+    "text": "Trim it. Split it. Convert it."
+  },
+  "mcp": {
+    "hash": "4f2f4a8e197023d48405aba533bb640504edd9ca2d91556045741619afef730d",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+3%",
+    "text": "Or hand the whole thing to an agent over MCP."
+  },
+  "outro": {
+    "hash": "75a998eb72b1eb681f795a1013ac58f24a2838e1f7249f0c4712c2452b88e4a4",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+3%",
+    "text": "Lightweight. Deterministic. Vigo. Video, for agents."
+  }
+}

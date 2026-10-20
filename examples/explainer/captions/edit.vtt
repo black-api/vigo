@@ -1,0 +1,16 @@
+1
+00:00:00,050 --> 00:00:01,800
+Editing is just data.
+
+2
+00:00:01,800 --> 00:00:07,387
+Trim a clip, split it at a timestamp, move it, change a property, or remove it.
+
+3
+00:00:07,387 --> 00:00:10,175
+Every operation rewrites the timeline.
+
+4
+00:00:10,175 --> 00:00:12,875
+Render again and the output follows.
+

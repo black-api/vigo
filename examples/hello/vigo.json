@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "name": "hello",
+  "width": 1280,
+  "height": 720,
+  "fps": 30,
+  "duration": 8,
+  "background": "#05070d",
+  "tracks": [
+    {
+      "id": "main",
+      "type": "html",
+      "clips": [
+        { "id": "intro", "kind": "html", "src": "scenes/intro.html", "start": 0, "duration": 4 },
+        { "id": "outro", "kind": "html", "src": "scenes/outro.html", "start": 4, "duration": 4 }
+      ]
+    },
+    {
+      "id": "overlay",
+      "type": "html",
+      "clips": [
+        { "id": "lower-third", "kind": "html", "src": "scenes/lower-third.html", "start": 0.8, "duration": 3.2 }
+      ]
+    },
+    {
+      "id": "audio",
+      "type": "audio",
+      "clips": []
+    }
+  ]
+}

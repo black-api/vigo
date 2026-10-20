@@ -1,0 +1,40 @@
+{
+  "generatedAt": "2026-10-20T03:46:52.042Z",
+  "voice": "en-US-AndrewMultilingualNeural",
+  "items": [
+    {
+      "kind": "final",
+      "file": "renders/vigo-ad.mp4",
+      "poster": "renders/vigo-ad-poster.jpg",
+      "project": "examples/ad/vigo.json",
+      "scenes": 6,
+      "duration": 33.208,
+      "width": 1280,
+      "height": 720,
+      "fps": 30,
+      "audio": {
+        "codec": "aac",
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "sizeBytes": 1830530
+    },
+    {
+      "kind": "final",
+      "file": "renders/vigo-explainer.mp4",
+      "poster": "renders/vigo-explainer-poster.jpg",
+      "project": "examples/explainer/vigo.json",
+      "scenes": 10,
+      "duration": 171.416667,
+      "width": 1280,
+      "height": 720,
+      "fps": 24,
+      "audio": {
+        "codec": "aac",
+        "sampleRate": 48000,
+        "channels": 2
+      },
+      "sizeBytes": 7088621
+    }
+  ]
+}

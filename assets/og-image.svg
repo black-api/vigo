@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="vigo — video, for agents">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#080c18"/>
+      <stop offset="1" stop-color="#0a0a18"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fb4ff"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cfe0ff"/>
+      <stop offset="1" stop-color="#c4b5fd"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6ea0ff" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#6ea0ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#a78bfa" stop-opacity="0.26"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <ellipse cx="250" cy="150" rx="520" ry="420" fill="url(#glowA)"/>
+  <ellipse cx="980" cy="540" rx="520" ry="400" fill="url(#glowB)"/>
+
+  <g transform="translate(92 168) scale(0.56)">
+    <rect x="24" y="24" width="464" height="464" rx="112" fill="#0d1428"/>
+    <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#glowA)"/>
+    <rect x="24.75" y="24.75" width="462.5" height="462.5" rx="111.25" fill="none" stroke="#8fb4ff" stroke-opacity="0.22" stroke-width="1.5"/>
+    <path d="M188 132 L188 332 L336 232 Z" fill="url(#mark)" stroke="url(#mark)" stroke-width="26" stroke-linejoin="round"/>
+    <rect x="140" y="376" width="232" height="18" rx="9" fill="#2a3450"/>
+    <rect x="140" y="376" width="104" height="18" rx="9" fill="url(#mark)"/>
+    <circle cx="244" cy="385" r="7" fill="#f4f7ff"/>
+  </g>
+
+  <text x="430" y="286" font-family="DejaVu Sans" font-size="104" font-weight="bold" fill="url(#word)" letter-spacing="-2">vigo</text>
+  <text x="434" y="342" font-family="DejaVu Sans" font-size="34" fill="#dce8ff">Video, for agents.</text>
+  <text x="434" y="392" font-family="DejaVu Sans" font-size="27" fill="#93a3c0">HTML scenes in &#183; JSON timeline &#183; deterministic MP4 out</text>
+  <text x="434" y="452" font-family="Fira Code, monospace" font-size="23" fill="#6ea0ff">npm i -g vigo-video &#160;&#160; vigo render project/vigo.json -o out.mp4</text>
+
+  <g transform="translate(92 520)">
+    <rect x="0" y="0" width="146" height="46" rx="12" fill="#131c33" stroke="#6ea0ff" stroke-opacity="0.35"/>
+    <text x="73" y="30" text-anchor="middle" font-family="Fira Code, monospace" font-size="20" fill="#cfe0ff">CLI</text>
+    <rect x="160" y="0" width="146" height="46" rx="12" fill="#131c33" stroke="#6ea0ff" stroke-opacity="0.35"/>
+    <text x="233" y="30" text-anchor="middle" font-family="Fira Code, monospace" font-size="20" fill="#cfe0ff">MCP</text>
+    <rect x="320" y="0" width="146" height="46" rx="12" fill="#131c33" stroke="#6ea0ff" stroke-opacity="0.35"/>
+    <text x="393" y="30" text-anchor="middle" font-family="Fira Code, monospace" font-size="20" fill="#cfe0ff">MIT</text>
+  </g>
+
+  <g transform="translate(640 512)">
+    <rect x="0" y="0" width="96" height="62" rx="10" fill="#16203a"/>
+    <rect x="104" y="0" width="96" height="62" rx="10" fill="#1b2748"/>
+    <rect x="208" y="0" width="96" height="62" rx="10" fill="#223055"/>
+    <rect x="312" y="0" width="96" height="62" rx="10" fill="#2a3a66"/>
+    <rect x="416" y="0" width="96" height="62" rx="10" fill="#33477c"/>
+    <rect x="520" y="0" width="96" height="62" rx="10" fill="#3d5593"/>
+    <rect x="0" y="78" width="616" height="8" rx="4" fill="#1d2742"/>
+    <rect x="0" y="78" width="268" height="8" rx="4" fill="url(#mark)"/>
+    <circle cx="268" cy="82" r="11" fill="#f4f7ff"/>
+  </g>
+</svg>

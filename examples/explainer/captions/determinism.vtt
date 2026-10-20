@@ -1,0 +1,16 @@
+1
+00:00:00,050 --> 00:00:02,537
+Rendering is deterministic.
+
+2
+00:00:02,537 --> 00:00:06,975
+Vigo opens each scene in headless Chromium and freezes time.
+
+3
+00:00:06,975 --> 00:00:15,887
+It pauses and seeks every CSS and Web Animation, seeks video elements, then calls your optional vigo dot seek hook.
+
+4
+00:00:15,887 --> 00:00:21,137
+Every frame is captured at an exact timestamp, so repeated renders match.
+

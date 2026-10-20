@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="vigo">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1428"/>
+      <stop offset="1" stop-color="#17122b"/>
+    </linearGradient>
+    <linearGradient id="mark" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#8fb4ff"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.32" cy="0.24" r="0.72">
+      <stop offset="0" stop-color="#6ea0ff" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#6ea0ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#bg)"/>
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#glow)"/>
+  <rect x="24.75" y="24.75" width="462.5" height="462.5" rx="111.25" fill="none" stroke="#8fb4ff" stroke-opacity="0.22" stroke-width="1.5"/>
+
+  <!-- play glyph -->
+  <path d="M188 132 L188 332 L336 232 Z" fill="url(#mark)" stroke="url(#mark)" stroke-width="26" stroke-linejoin="round"/>
+
+  <!-- timeline bar -->
+  <rect x="140" y="376" width="232" height="18" rx="9" fill="#2a3450"/>
+  <rect x="140" y="376" width="104" height="18" rx="9" fill="url(#mark)"/>
+  <circle cx="244" cy="385" r="7" fill="#f4f7ff"/>
+</svg>

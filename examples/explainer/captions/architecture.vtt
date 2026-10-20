@@ -1,0 +1,16 @@
+1
+00:00:00,050 --> 00:00:02,075
+The stack is deliberately small.
+
+2
+00:00:02,075 --> 00:00:07,325
+TypeScript on Node, Chromium for painting, and ffmpeg for encoding.
+
+3
+00:00:07,325 --> 00:00:13,637
+Three runtime dependencies, no database, no GPU, no editor state.
+
+4
+00:00:13,637 --> 00:00:16,750
+Frames are staged in a temp folder and cleaned up.
+

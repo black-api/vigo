@@ -1,0 +1,209 @@
+{
+  "version": 1,
+  "name": "vigo-explainer",
+  "width": 1280,
+  "height": 720,
+  "fps": 24,
+  "duration": 171.412,
+  "background": "#05070d",
+  "tracks": [
+    {
+      "id": "main",
+      "type": "html",
+      "clips": [
+        {
+          "id": "gap",
+          "kind": "html",
+          "src": "scenes/gap.html",
+          "start": 0,
+          "duration": 16.33
+        },
+        {
+          "id": "model",
+          "kind": "html",
+          "src": "scenes/model.html",
+          "start": 16.33,
+          "duration": 18.514
+        },
+        {
+          "id": "determinism",
+          "kind": "html",
+          "src": "scenes/determinism.html",
+          "start": 34.844,
+          "duration": 22.642
+        },
+        {
+          "id": "composite",
+          "kind": "html",
+          "src": "scenes/composite.html",
+          "start": 57.486,
+          "duration": 18.97
+        },
+        {
+          "id": "build",
+          "kind": "html",
+          "src": "scenes/build.html",
+          "start": 76.456,
+          "duration": 14.458
+        },
+        {
+          "id": "edit",
+          "kind": "html",
+          "src": "scenes/edit.html",
+          "start": 90.914,
+          "duration": 14.386
+        },
+        {
+          "id": "media",
+          "kind": "html",
+          "src": "scenes/media.html",
+          "start": 105.3,
+          "duration": 16.162
+        },
+        {
+          "id": "mcp",
+          "kind": "html",
+          "src": "scenes/mcp.html",
+          "start": 121.462,
+          "duration": 22.426
+        },
+        {
+          "id": "architecture",
+          "kind": "html",
+          "src": "scenes/architecture.html",
+          "start": 143.888,
+          "duration": 18.25
+        },
+        {
+          "id": "outro",
+          "kind": "html",
+          "src": "scenes/outro.html",
+          "start": 162.138,
+          "duration": 9.274
+        }
+      ]
+    },
+    {
+      "id": "voice",
+      "type": "audio",
+      "clips": [
+        {
+          "id": "gap-vo",
+          "kind": "audio",
+          "src": "audio/gap.mp3",
+          "start": 0.55,
+          "duration": 14.88,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "model-vo",
+          "kind": "audio",
+          "src": "audio/model.mp3",
+          "start": 16.88,
+          "duration": 17.064,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "determinism-vo",
+          "kind": "audio",
+          "src": "audio/determinism.mp3",
+          "start": 35.394,
+          "duration": 21.192,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "composite-vo",
+          "kind": "audio",
+          "src": "audio/composite.mp3",
+          "start": 58.036,
+          "duration": 17.52,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "build-vo",
+          "kind": "audio",
+          "src": "audio/build.mp3",
+          "start": 77.006,
+          "duration": 13.008,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "edit-vo",
+          "kind": "audio",
+          "src": "audio/edit.mp3",
+          "start": 91.464,
+          "duration": 12.936,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "media-vo",
+          "kind": "audio",
+          "src": "audio/media.mp3",
+          "start": 105.85,
+          "duration": 14.712,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "mcp-vo",
+          "kind": "audio",
+          "src": "audio/mcp.mp3",
+          "start": 122.012,
+          "duration": 20.976,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "architecture-vo",
+          "kind": "audio",
+          "src": "audio/architecture.mp3",
+          "start": 144.438,
+          "duration": 16.8,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        },
+        {
+          "id": "outro-vo",
+          "kind": "audio",
+          "src": "audio/outro.mp3",
+          "start": 162.688,
+          "duration": 7.824,
+          "volume": 1,
+          "fadeIn": 0.03,
+          "fadeOut": 0.12
+        }
+      ]
+    },
+    {
+      "id": "music",
+      "type": "audio",
+      "clips": [
+        {
+          "id": "music-bed",
+          "kind": "audio",
+          "src": "audio/music.mp3",
+          "start": 0,
+          "duration": 171.412,
+          "volume": 0.085,
+          "fadeIn": 2,
+          "fadeOut": 3
+        }
+      ]
+    }
+  ]
+}

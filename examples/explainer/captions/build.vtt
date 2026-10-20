@@ -1,0 +1,12 @@
+1
+00:00:00,050 --> 00:00:02,500
+Building a video is a few commands.
+
+2
+00:00:02,500 --> 00:00:06,850
+Init a project, add your scenes, add a music bed, and render.
+
+3
+00:00:06,850 --> 00:00:12,950
+The project stays readable JSON, so the next edit is a command, not a binary file.
+

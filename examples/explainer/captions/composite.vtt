@@ -1,0 +1,12 @@
+1
+00:00:00,050 --> 00:00:02,237
+Then ffmpeg takes over.
+
+2
+00:00:02,237 --> 00:00:11,575
+It composites the transparent HTML layers over the background, fits video and image clips, and mixes narration, music, and fades.
+
+3
+00:00:11,575 --> 00:00:17,462
+One pass produces H.264 MP4 or VP9 WebM.
+

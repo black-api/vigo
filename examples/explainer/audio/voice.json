@@ -1,0 +1,62 @@
+{
+  "gap": {
+    "hash": "353214d54294d8d3be343cd743b2912fc6bff767de1c65adf02c8f99552352ac",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+0%",
+    "text": "AI agents can write code, docs, and entire apps. Video was the missing output. Vigo closes that gap: a lightweight engine that turns HTML scenes and a JSON timeline into a real, editable video."
+  },
+  "model": {
+    "hash": "793525c327be2dbe1488b07a085d22200331397429e6caa1df2ec21a58b9a842",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+0%",
+    "text": "The mental model is simple. A video is a JSON timeline. Visual tracks stack in order. Each clip has a start, a duration, and an offset. HTML clips are scenes. Media clips are footage. Audio tracks are mixed underneath."
+  },
+  "determinism": {
+    "hash": "f7183f26cfe015a59b7708d5d6b7a57383cf615dc7f95085270567182649d0de",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+0%",
+    "text": "Rendering is deterministic. Vigo opens each scene in headless Chromium and freezes time. It pauses and seeks every CSS and Web Animation, seeks video elements, then calls your optional vigo dot seek hook. Every frame is captured at an exact timestamp, so repeated renders match."
+  },
+  "composite": {
+    "hash": "8d54a3a94ecb47b1c5e372b0fe3061829c1c5a68f8a3429a1dc860b97a704700",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+0%",
+    "text": "Then ffmpeg takes over. It composites the transparent HTML layers over the background, fits video and image clips, and mixes narration, music, and fades. One pass produces H.264 MP4 or VP9 WebM."
+  },
+  "build": {
+    "hash": "84b3000c4f19832ef534a555c275e7caed83ffdb6e94b68f449369f54386a267",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+0%",
+    "text": "Building a video is a few commands. Init a project, add your scenes, add a music bed, and render. The project stays readable JSON, so the next edit is a command, not a binary file."
+  },
+  "edit": {
+    "hash": "8fa534d44f7a9f8fd0ef0222a2db3890ee388d5bf584f7fa329e32697ad49ab1",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+0%",
+    "text": "Editing is just data. Trim a clip, split it at a timestamp, move it, change a property, or remove it. Every operation rewrites the timeline. Render again and the output follows."
+  },
+  "media": {
+    "hash": "4cfcb53b20f1e6521833459cb5605156ff3183d14abe241c278bf538f9ff9737",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+0%",
+    "text": "Vigo also speaks ffmpeg. Convert formats, resize, trim, concatenate clips, extract frames, or pull a poster frame. Those outputs can go straight back into the timeline as media clips."
+  },
+  "mcp": {
+    "hash": "1e06fd24ed415292da2ee148193208cedcf231203d85675582ab07eb50815e7e",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+0%",
+    "text": "For agents, vigo runs as an MCP server. Fourteen tools cover project creation, scene writing, clip editing, rendering, probing, and conversion. The vigo guide resource carries the schema and the seek contract, so an agent can write, render, inspect, and iterate without a human in the loop."
+  },
+  "architecture": {
+    "hash": "5acc1ed7547372456634f7a92586c2b3ce2a7b9a738be5565c25a2d93d3c35c8",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+0%",
+    "text": "The stack is deliberately small. TypeScript on Node, Chromium for painting, and ffmpeg for encoding. Three runtime dependencies, no database, no GPU, no editor state. Frames are staged in a temp folder and cleaned up."
+  },
+  "outro": {
+    "hash": "72147cea9bc09dea37fdad12bdda225b4e7e5e957eda63c33fdb41f7847887c6",
+    "voice": "en-US-AndrewMultilingualNeural",
+    "rate": "+0%",
+    "text": "Install it, run vigo doctor, and make something. HTML in. Video out. Vigo: video, for agents."
+  }
+}

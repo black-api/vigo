@@ -1,0 +1,28 @@
+1
+00:00:00,050 --> 00:00:01,925
+The mental model is simple.
+
+2
+00:00:01,925 --> 00:00:04,112
+A video is a JSON timeline.
+
+3
+00:00:04,112 --> 00:00:06,137
+Visual tracks stack in order.
+
+4
+00:00:06,137 --> 00:00:10,325
+Each clip has a start, a duration, and an offset.
+
+5
+00:00:10,325 --> 00:00:12,550
+HTML clips are scenes.
+
+6
+00:00:12,550 --> 00:00:14,612
+Media clips are footage.
+
+7
+00:00:14,612 --> 00:00:17,000
+Audio tracks are mixed underneath.
+

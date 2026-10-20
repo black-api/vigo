@@ -1,0 +1,12 @@
+1
+00:00:00,050 --> 00:00:03,987
+For agents, vigo runs as an MCP server.
+
+2
+00:00:03,987 --> 00:00:11,112
+Fourteen tools cover project creation, scene writing, clip editing, rendering, probing, and conversion.
+
+3
+00:00:11,112 --> 00:00:20,925
+The vigo guide resource carries the schema and the seek contract, so an agent can write, render, inspect, and iterate without a human in the loop.
+

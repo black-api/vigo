@@ -1,0 +1,16 @@
+node_modules/
+dist/
+out/
+frames/
+.vigo/
+*.log
+.DS_Store
+coverage/
+*.tmp
+*.tgz
+renders/*.log
+renders/*.pid
+renders/*.preview.mp4
+
+.venv/
+__pycache__/

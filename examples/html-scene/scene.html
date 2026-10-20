@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: #070b14; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; color: #f2f6ff; }
+  .stage { position: relative; height: 100%; display: grid; place-items: center; }
+  .halo {
+    position: absolute; width: 55vw; height: 55vw; border-radius: 50%;
+    background: radial-gradient(circle, rgba(79,140,255,.35), rgba(139,92,246,.18) 45%, transparent 70%);
+    filter: blur(40px);
+  }
+  .copy { position: relative; width: 80%; }
+  .kicker { color: #8fb4ff; font-size: 1vw; letter-spacing: .5em; text-transform: uppercase;
+    animation: fade-in .6s ease-out both; }
+  h1 { margin: 1.1vw 0 1.5vw; font-size: 6vw; line-height: .98; letter-spacing: -.04em;
+    animation: rise 1s cubic-bezier(.16,1,.3,1) .1s both; }
+  h1 span { color: #8fb4ff; }
+  .track { width: 100%; height: 4px; background: rgba(255,255,255,.12); border-radius: 999px; overflow: hidden; }
+  .fill { height: 100%; width: 0; background: linear-gradient(90deg, #4f8cff, #8b5cf6); border-radius: 999px; }
+  .row { display: flex; justify-content: space-between; margin-top: 1vw; color: #7f8ca6;
+    font: .9vw ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .08em; }
+  .row b { color: #d7e4ff; font-weight: 500; }
+  @keyframes rise { from { opacity: 0; transform: translateY(2.5vw); } to { opacity: 1; transform: none; } }
+  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+</style>
+</head>
+<body>
+  <div class="stage">
+    <div class="halo"></div>
+    <div class="copy">
+      <div class="kicker">seek-driven scene</div>
+      <h1>Frames follow<br /><span>your clock.</span></h1>
+      <div class="track"><div class="fill" id="fill"></div></div>
+      <div class="row"><span>window.vigo.seek(t)</span><span><b id="pct">0</b>%</span></div>
+    </div>
+  </div>
+  <script>
+    // CSS animations are seeked automatically. For JS-driven motion,
+    // expose a pure seek(t) hook: no rAF, no wall clock, no surprises.
+    const fill = document.getElementById("fill");
+    const pct = document.getElementById("pct");
+    window.vigo = {
+      seek(t) {
+        const progress = Math.max(0, Math.min(1, t / 4));
+        fill.style.width = (progress * 100).toFixed(2) + "%";
+        pct.textContent = Math.round(progress * 100);
+      }
+    };
+  </script>
+</body>
+</html>

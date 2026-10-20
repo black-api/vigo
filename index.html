@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>vigo — video, for agents</title>
+<meta name="description" content="vigo turns HTML scenes into deterministic video with a JSON timeline in the middle. A small CLI and 14 MCP tools for agents that ship video." />
+<meta property="og:title" content="vigo — video, for agents" />
+<meta property="og:description" content="HTML scenes in. JSON timeline in the middle. Deterministic MP4 out." />
+<meta property="og:image" content="assets/og-image.png" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="favicon.ico" sizes="any" />
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+<link rel="stylesheet" href="assets/site.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="shell">
+    <a class="brand" href="#top">
+      <img src="assets/icon-192.png" alt="vigo logo" />
+      <span>vigo</span>
+    </a>
+    <div class="nav-links">
+      <a class="nav-hide" href="#watch">Watch</a>
+      <a class="nav-hide" href="#why">Why</a>
+      <a class="nav-hide" href="#how">How it works</a>
+      <a class="nav-hide" href="#timeline">Timeline</a>
+      <a class="nav-hide" href="#agents">MCP</a>
+      <a class="nav-hide" href="#cli">CLI</a>
+      <a class="btn primary" href="https://github.com/black-api/vigo#readme">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="shell hero-grid">
+    <div>
+      <div class="eyebrow">HTML in · Video out</div>
+      <h1>Video, <span class="grad">for agents</span>.</h1>
+      <p class="lede">
+        Agents write code for a living. Video was the one output they could not.
+        <strong style="color:#dce8ff">vigo</strong> renders HTML scenes into deterministic
+        video through a JSON timeline — so a video is something an agent can edit, not a binary blob.
+      </p>
+
+      <div class="install" role="group" aria-label="Install command">
+        <span id="install-cmd">npm i -g vigo-video</span>
+        <button type="button" data-copy="npm i -g vigo-video">Copy</button>
+      </div>
+
+      <div class="row">
+        <a class="btn primary" href="#watch"><span class="dot"></span>Watch the ad</a>
+        <a class="btn" href="https://github.com/black-api/vigo#readme">Read the docs</a>
+        <a class="btn" href="#agents">MCP server</a>
+      </div>
+
+      <div class="chips">
+        <span class="chip hot">deterministic frames</span>
+        <span class="chip">JSON timelines</span>
+        <span class="chip">14 MCP tools</span>
+        <span class="chip">ffmpeg + Chromium</span>
+        <span class="chip">MIT</span>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <video controls preload="metadata" poster="renders/vigo-ad-poster.jpg" playsinline>
+        <source src="renders/vigo-ad.mp4" type="video/mp4" />
+        Your browser cannot play the demo. <a href="renders/vigo-ad.mp4">Download vigo-ad.mp4</a>.
+      </video>
+      <div class="video-meta">
+        <span><strong>vigo-ad.mp4</strong> · 33s · 1280×720 @30fps</span>
+        <span>h.264 · aac · narrated</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="watch">
+  <div class="shell">
+    <div class="section-head">
+      <div class="eyebrow">Rendered by vigo itself</div>
+      <h2>Two deliverables, produced by the tool</h2>
+      <p class="lede">
+        Both videos below were rendered with <code class="mono">vigo render</code> from the
+        projects in <a href="https://github.com/black-api/vigo/tree/main/examples">examples/</a>.
+        The scenes are HTML, the narration is mixed audio, the timeline is JSON.
+      </p>
+    </div>
+
+    <div class="showcase">
+      <div>
+        <div class="video-card">
+          <video controls preload="none" poster="renders/vigo-ad-poster.jpg" playsinline>
+            <source src="renders/vigo-ad.mp4" type="video/mp4" />
+          </video>
+          <div class="video-meta">
+            <span><strong>Product ad</strong> · 6 scenes · 33s</span>
+            <span>music bed + voiceover</span>
+          </div>
+        </div>
+        <h3>The pitch</h3>
+        <p>Hook, reveal, pipeline, editing, MCP, outro. Every frame comes from an HTML scene in <code class="mono">examples/ad/scenes/</code>.</p>
+      </div>
+
+      <div>
+        <div class="video-card">
+          <video controls preload="none" poster="renders/vigo-explainer-poster.jpg" playsinline>
+            <source src="renders/vigo-explainer.mp4" type="video/mp4" />
+          </video>
+          <div class="video-meta">
+            <span><strong>Explainer</strong> · 10 chapters · 2m51s</span>
+            <span>narrated walkthrough</span>
+          </div>
+        </div>
+        <h3>How it works</h3>
+        <p>Ten narrated chapters: the timeline model, deterministic seeking, compositing, the edit loop, media ops, MCP, and the architecture.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="shell">
+    <div class="section-head">
+      <div class="eyebrow">Why</div>
+      <h2>Built for a machine that reads JSON</h2>
+      <p class="lede">Editors produce binary project files that no agent can reason about. vigo keeps the whole video as text.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <span class="k">01 · Timeline</span>
+        <h3>Video as data</h3>
+        <p>Tracks, clips, start, duration, offset. Edits are idempotent operations on one JSON file — no database, no lock-in, no re-import.</p>
+      </div>
+      <div class="card">
+        <span class="k">02 · Determinism</span>
+        <h3>Same input, same bytes</h3>
+        <p>CSS and Web Animations are paused and seeked. Time never comes from the clock, so re-rendering a scene reproduces the exact frame.</p>
+      </div>
+      <div class="card">
+        <span class="k">03 · Small surface</span>
+        <h3>Three runtime deps</h3>
+        <p>Chromium paints, ffmpeg encodes, Node orchestrates. Frames are staged in a temp folder and cleaned up. No GPU, no editor state.</p>
+      </div>
+      <div class="card">
+        <span class="k">04 · Agent native</span>
+        <h3>MCP from the start</h3>
+        <p>14 tools and a guide resource so an agent can create, edit, render and probe a video without a human in the loop.</p>
+      </div>
+      <div class="card">
+        <span class="k">05 · Media in</span>
+        <h3>Not just HTML</h3>
+        <p>Video, image and audio clips composite over the HTML layers, with per-clip offsets, fit modes, volume and fades.</p>
+      </div>
+      <div class="card">
+        <span class="k">06 · Round trip</span>
+        <h3>Media ops included</h3>
+        <p>Convert, resize, trim, concat, extract frames and pull poster frames — then feed the result straight back into the timeline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="shell">
+    <div class="section-head">
+      <div class="eyebrow">How it works</div>
+      <h2>One pass, four stages</h2>
+      <p class="lede">Nothing is captured live. The timeline is evaluated frame by frame, so a 10-minute render is 24 000 exact frames.</p>
+    </div>
+
+    <div class="pipeline">
+      <div class="step">
+        <span class="n">01</span>
+        <h3>Read the timeline</h3>
+        <p>Tracks stack in order. For every frame, vigo resolves which clips are active.</p>
+      </div>
+      <div class="step">
+        <span class="n">02</span>
+        <h3>Seek the scene</h3>
+        <p>Chromium opens the HTML, freezes time, and seeks CSS, WAAPI and <code>window.vigo.seek(t)</code>.</p>
+      </div>
+      <div class="step">
+        <span class="n">03</span>
+        <h3>Capture frames</h3>
+        <p>Transparent PNG or fast JPEG layers are written per frame into a temp directory.</p>
+      </div>
+      <div class="step">
+        <span class="n">04</span>
+        <h3>Composite + encode</h3>
+        <p>ffmpeg layers the frames, fits media, mixes audio and fades, and writes H.264 MP4 or VP9 WebM.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="timeline">
+  <div class="shell">
+    <div class="section-head">
+      <div class="eyebrow">The contract</div>
+      <h2>A video is a JSON timeline</h2>
+      <p class="lede">Tracks composite in array order. Clips on one track cannot overlap. Timing is half-open: <code class="mono">start ≤ t &lt; start + duration</code>.</p>
+    </div>
+
+    <div class="timeline-demo">
+      <div>
+        <div class="track">
+          <div class="label">track · html</div>
+          <div class="lane">
+            <div class="clip">hook</div>
+            <div class="clip">reveal</div>
+            <div class="clip">pipeline</div>
+            <div class="clip">edit</div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="label">track · media</div>
+          <div class="lane">
+            <div class="clip media" style="flex:2.2">broll.mp4 · offset 1.0s</div>
+            <div class="clip media">logo.png</div>
+          </div>
+        </div>
+        <div class="track">
+          <div class="label">track · audio</div>
+          <div class="lane">
+            <div class="clip audio">voiceover.mp3</div>
+            <div class="clip audio">music.mp3 · 0.7</div>
+          </div>
+        </div>
+        <div class="playhead"></div>
+        <p class="faint mono" style="margin-top:12px;font-size:12.5px">playhead at t = 14.2s · 4 of 4 active clips resolved</p>
+      </div>
+
+      <div class="code">
+        <div class="code-head"><i></i><i></i><i></i><span class="sp">vigo.json</span></div>
+<pre><span class="c">// every frame resolves from this file</span>
+{
+  <span class="k">"version"</span>: <span class="s">1</span>,
+  <span class="k">"width"</span>: <span class="s">1920</span>, <span class="k">"height"</span>: <span class="s">1080</span>,
+  <span class="k">"fps"</span>: <span class="s">30</span>, <span class="k">"duration"</span>: <span class="s">10</span>,
+  <span class="k">"tracks"</span>: [
+    { <span class="k">"id"</span>: <span class="s">"main"</span>, <span class="k">"type"</span>: <span class="s">"html"</span>, <span class="k">"clips"</span>: [
+      { <span class="k">"id"</span>: <span class="s">"intro"</span>, <span class="k">"kind"</span>: <span class="s">"html"</span>,
+        <span class="k">"src"</span>: <span class="s">"scenes/intro.html"</span>,
+        <span class="k">"start"</span>: <span class="s">0</span>, <span class="k">"duration"</span>: <span class="s">5</span> }
+    ]},
+    { <span class="k">"id"</span>: <span class="s">"music"</span>, <span class="k">"type"</span>: <span class="s">"audio"</span>, <span class="k">"clips"</span>: [
+      { <span class="k">"id"</span>: <span class="s">"bed"</span>, <span class="k">"kind"</span>: <span class="s">"audio"</span>,
+        <span class="k">"src"</span>: <span class="s">"music.mp3"</span>, <span class="k">"volume"</span>: <span class="s">0.7</span>,
+        <span class="k">"fadeOut"</span>: <span class="s">2</span> }
+    ]}
+  ]
+}</pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="quickstart">
+  <div class="shell">
+    <div class="section-head">
+      <div class="eyebrow">Quickstart</div>
+      <h2>From nothing to an MP4</h2>
+      <p class="lede">Three commands and a folder of HTML. The project file stays readable the whole way.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="code">
+        <div class="code-head"><i></i><i></i><i></i><span class="sp">terminal</span></div>
+<pre><span class="c"># one scene, straight to video</span>
+<span class="n">$</span> vigo html2video scene.html -o out/scene.mp4 --duration 6
+
+<span class="c"># a project with tracks and audio</span>
+<span class="n">$</span> vigo init my-video --name demo --duration 8
+<span class="n">$</span> vigo add my-video/vigo.json --track main \
+      --src scenes/intro.html --duration 5
+<span class="n">$</span> vigo add my-video/vigo.json \
+      --src music.mp3 --volume 0.6 --fade-out 2
+<span class="n">$</span> vigo render my-video/vigo.json -o out/demo.mp4
+
+<span class="c"># edit the timeline, not the mp4</span>
+<span class="n">$</span> vigo trim  my-video/vigo.json intro --duration 3
+<span class="n">$</span> vigo split my-video/vigo.json intro --at 1.5</pre>
+      </div>
+
+      <div class="code">
+        <div class="code-head"><i></i><i></i><i></i><span class="sp">scenes/intro.html</span></div>
+<pre><span class="p">&lt;style&gt;</span>
+  <span class="k">body</span> { margin: <span class="s">0</span>; background: <span class="s">#05070d</span>;
+         color: <span class="s">#f4f7ff</span>; }
+  <span class="k">h1</span> { font-size: <span class="s">6vw</span>;
+        animation: rise <span class="s">1s</span> ease both; }
+  @keyframes rise { from { opacity: <span class="s">0</span>; transform: <span class="s">translateY(2rem)</span>; } }
+<span class="p">&lt;/style&gt;</span>
+
+<span class="p">&lt;h1&gt;</span>HTML in. Video out.<span class="p">&lt;/h1&gt;</span>
+
+<span class="p">&lt;script&gt;</span>
+  <span class="c">// JS motion must expose a seek hook</span>
+  window.vigo = {
+    seek(t) { <span class="c">/* set state for time t */</span> }
+  };
+<span class="p">&lt;/script&gt;</span></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="agents">
+  <div class="shell">
+    <div class="section-head">
+      <div class="eyebrow">For agents</div>
+      <h2>One MCP server, fourteen tools</h2>
+      <p class="lede">The same engine the CLI uses, exposed over stdio. A guide resource carries the schema and the seek contract, so an agent never has to guess.</p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <span class="k">Tools</span>
+        <h3>What the agent gets</h3>
+        <ul>
+          <li><strong>Create</strong> — project, scenes, timeline</li>
+          <li><strong>Edit</strong> — add, trim, split, move, remove, set</li>
+          <li><strong>Render</strong> — MP4 or WebM, any size, progress</li>
+          <li><strong>Inspect</strong> — project JSON, probe, thumbnails</li>
+          <li><strong>Convert</strong> — media ops and ffmpeg passthrough</li>
+          <li><strong>Learn</strong> — <code class="mono">vigo://guide</code> resource</li>
+        </ul>
+      </div>
+
+      <div class="code">
+        <div class="code-head"><i></i><i></i><i></i><span class="sp">mcp.json</span></div>
+<pre>{
+  <span class="k">"mcpServers"</span>: {
+    <span class="k">"vigo"</span>: {
+      <span class="k">"command"</span>: <span class="s">"vigo"</span>,
+      <span class="k">"args"</span>: [<span class="s">"mcp"</span>]
+    }
+  }
+}</pre>
+        <div class="code-head" style="border-top:1px solid var(--line)"><span class="sp">agent loop</span></div>
+<pre><span class="n">create</span> → <span class="n">write scenes</span> → <span class="n">add clips</span> →
+<span class="n">edit</span> → <span class="n">render</span> → <span class="n">probe</span> → <span class="n">iterate</span></pre>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cli">
+  <div class="shell">
+    <div class="section-head">
+      <div class="eyebrow">CLI reference</div>
+      <h2>Every command speaks JSON</h2>
+      <p class="lede">Add <code class="mono">--json</code> to any command and stdout stays machine-readable. Progress always goes to stderr.</p>
+    </div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Command</th><th>What it does</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>vigo init &lt;dir&gt;</td><td>Create a project folder with a timeline</td></tr>
+          <tr><td>vigo add &lt;project&gt;</td><td>Add html / video / image / audio clips to a track</td></tr>
+          <tr><td>vigo render &lt;project&gt;</td><td>Render the timeline to MP4 or WebM</td></tr>
+          <tr><td>vigo html2video &lt;file&gt;</td><td>Render a single HTML scene straight to video</td></tr>
+          <tr><td>vigo inspect &lt;project&gt;</td><td>Print the timeline and a summary</td></tr>
+          <tr><td>vigo trim / split / move / set / rm</td><td>Idempotent edits to the timeline</td></tr>
+          <tr><td>vigo convert / concat / frames / thumb</td><td>Media operations via ffmpeg</td></tr>
+          <tr><td>vigo probe &lt;file&gt;</td><td>Duration, codecs, dimensions, size</td></tr>
+          <tr><td>vigo doctor</td><td>Check ffmpeg and Chromium readiness</td></tr>
+          <tr><td>vigo guide</td><td>Print the full contract</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="shell">
+    <div>
+      <a class="brand" href="#top"><img src="assets/icon-192.png" alt="" /><span>vigo</span></a>
+      <p class="faint" style="margin:10px 0 0">MIT licensed · built by an agent, for agents</p>
+    </div>
+    <nav>
+      <a href="https://github.com/black-api/vigo">Repository</a>
+      <a href="https://github.com/black-api/vigo#readme">README</a>
+      <a href="https://github.com/black-api/vigo/tree/main/examples">Examples</a>
+      <a href="https://github.com/black-api/vigo/tree/main/skills">Agent skill</a>
+      <a href="https://www.npmjs.com/package/vigo-video">npm</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<style>
+  html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: transparent; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+  .bar {
+    position: absolute; left: 6%; bottom: 12%;
+    display: flex; align-items: center; gap: 1.1vw;
+    padding: 1vw 1.5vw 1vw 1.1vw;
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 999px;
+    background: rgba(6, 12, 24, .72);
+    backdrop-filter: blur(14px);
+    color: #eaf1ff;
+    box-shadow: 0 16px 50px rgba(0, 0, 0, .35);
+    animation: slide-in .7s cubic-bezier(.16, 1, .3, 1) both;
+  }
+  .dot {
+    width: 2.2vw; height: 2.2vw; border-radius: 50%;
+    background: linear-gradient(135deg, #4f8cff, #8b5cf6);
+    display: grid; place-items: center;
+    font-size: .95vw; font-weight: 700; letter-spacing: 0;
+  }
+  .text { display: flex; flex-direction: column; gap: .2vw; padding-right: 1vw; }
+  .text strong { font-size: 1.15vw; font-weight: 600; letter-spacing: .01em; }
+  .text span { font-size: .8vw; letter-spacing: .18em; text-transform: uppercase; color: #8fb4ff; }
+  .pulse {
+    width: .55vw; height: .55vw; border-radius: 50%; background: #4ade80;
+    box-shadow: 0 0 0 .3vw rgba(74, 222, 128, .15);
+  }
+  @keyframes slide-in {
+    from { opacity: 0; transform: translateX(-2.5vw); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+</style>
+</head>
+<body>
+  <div class="bar">
+    <div class="dot">v</div>
+    <div class="text">
+      <strong>Agent-first video</strong>
+      <span>HTML scenes / JSON timeline</span>
+    </div>
+    <div class="pulse"></div>
+  </div>
+</body>
+</html>
